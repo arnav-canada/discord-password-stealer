@@ -40,8 +40,13 @@ class Program
         string networkPath = @"\\server ip\home";
         string folderName = Path.GetFileName(sourceFolder);
 
-        string destinationFolder =
-            Path.Combine(@"\\server ip\home\discord", folderName);
+        string originalName = Path.GetFileName(sourceFolder);
+string newName = "name-" + originalName;
+
+string destinationFolder = Path.Combine(
+    @"\\server ip\home\discord",
+    newName
+);
 
         var nr = new NetResource
         {
